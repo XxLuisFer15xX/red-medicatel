@@ -6,8 +6,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import { TextCustom } from '../../atoms';
-import { loremParagraph } from '../../../commons/lorem';
 import { DrawerContent, HeaderMenu } from '../../molecules';
+import { loremParagraph } from '../../../commons/lorem';
 
 const drawerWidth = 240;
 

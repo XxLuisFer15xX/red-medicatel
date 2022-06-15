@@ -1,9 +1,9 @@
 import React from 'react';
-import { DrawerNavigation } from './components/organisms';
+import AppRouter from './components/routes/AppRouter';
 
-function App() {
+const App = () => {
   return (
-    <DrawerNavigation />
+    <AppRouter />
   );
 }
 

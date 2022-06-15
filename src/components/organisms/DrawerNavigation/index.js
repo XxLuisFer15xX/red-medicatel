@@ -4,10 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
-import Toolbar from '@mui/material/Toolbar';
-import { TextCustom } from '../../atoms';
 import { DrawerContent, HeaderMenu } from '../../molecules';
-import { loremParagraph } from '../../../commons/lorem';
 
 const drawerWidth = 240;
 
@@ -22,7 +19,7 @@ const DrawerNavigation = props => {
   const container = window ? () => window().document.body : undefined;
 
   return (
-    <div style={{ display: 'flex', height: '100vh'}}>
+    <div style={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -67,11 +64,6 @@ const DrawerNavigation = props => {
           <DrawerContent />
         </Drawer>
       </Box>
-      <div className={'w-full h-full'}>
-        <Toolbar />
-        <TextCustom text={loremParagraph} isParagraph />
-        <TextCustom text={loremParagraph} isParagraph />
-      </div>
     </div>
   );
 };

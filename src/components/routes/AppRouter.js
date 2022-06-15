@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home, Login } from '../pages';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Login } from '../pages';
+import { DashboardRouter } from './DashboardRouter';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
@@ -15,7 +16,9 @@ const AppRouter = () => {
     <Router>
       <Routes>
         <Route path="/Login" element={<PublicRoute element={Login} isAuth={isAuth} />} />
-        <Route path="/" element={<PrivateRoute element={Home} isAuth={isAuth} />} />
+        <Route path="/dashboard/*" element={<PrivateRoute element={DashboardRouter} isAuth={isAuth} />} />
+        <Route path="/" element={<Navigate to="/dashboard" />} />
+        <Route path="*" element={<Navigate to="/dashboard" />} />
       </Routes>
     </Router>
   );

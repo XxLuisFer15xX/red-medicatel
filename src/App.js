@@ -1,5 +1,5 @@
 import React from 'react';
-import DrawerNavigation from './components/organisms/DrawerNavigation';
+import { DrawerNavigation } from './components/organisms';
 
 function App() {
   return (

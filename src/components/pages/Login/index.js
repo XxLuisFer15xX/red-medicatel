@@ -15,6 +15,9 @@ import { ButtonCustom, TextInputCustom } from '../../atoms';
 // Const
 import { authTypes } from '../../../commons/types';
 
+// Apis
+import { apiLogin } from '../../../api/login';
+
 const Login = () => {
   const { dispatchAuth } = useContext(AuthContext);
   const [values, handleInputChange,,resetValues] = useForm({
@@ -23,11 +26,21 @@ const Login = () => {
   });
   const { email,password } = values;
 
-  const handleLogin = () => {
-    dispatchAuth({
-      type: authTypes.login,
-      payload: 'Luis',
-    });
+  const handleLogin = async () => {
+    const params = {
+      email,
+      password,
+    }
+    const response = await apiLogin(params);
+    const { success, message, data } = response;
+    if (success) {
+      dispatchAuth({
+        type: authTypes.login,
+        payload: data,
+      });
+    } else {
+      console.log(message);
+    }
     resetValues();
   };
 

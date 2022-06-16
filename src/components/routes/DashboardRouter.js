@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { DrawerNavigation } from '../organisms';
-import Home from '../pages/Home';
 import Toolbar from '@mui/material/Toolbar';
+import { Colaborators, Home } from '../pages';
 
 const drawerWidth = 240;
 
@@ -15,8 +15,9 @@ export const DashboardRouter = () => {
         <div style={{overflowY: 'auto'}}>
           <Routes>
             <Route path="/home" element={<Home />} />
+            <Route path="/colaborators" element={<Colaborators />} />
             <Route path="/" element={<Navigate to="/dashboard/home" />} />
-            <Route path="*" element={<Navigate to="/dashboard/home" />} />
+            <Route path="*" element={<Navigate to="/page-error" />} />
           </Routes>
         </div>
       </div>

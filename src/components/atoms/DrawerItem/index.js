@@ -11,7 +11,7 @@ const DrawerItem = ({ text = '', onClick = () => null, icon = null }) => {
 
   return (
     <ListItem key={text} disablePadding onClick={handleClick}>
-      <ListItemButton>
+      <ListItemButton className='pl-10'>
         <ListItemIcon>{icon}</ListItemIcon>
         <ListItemText primary={text} />
       </ListItemButton>

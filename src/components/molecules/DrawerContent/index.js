@@ -8,9 +8,12 @@ import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../../hooks/context/authContext';
 
 // Icons
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import Logout from '@mui/icons-material/Logout';
+import SafetyDividerIcon from '@mui/icons-material/SafetyDivider';
+import LogoutIcon from '@mui/icons-material/Logout';
+import BusinessIcon from '@mui/icons-material/Business';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import RedMedicatelIcon from '../../../assets/images/red-medicatel.PNG';
+import UserLogo from '../../../assets/images/user-logo.PNG';
 
 // Components
 import { DrawerItem, TextCustom } from '../../atoms';
@@ -36,21 +39,27 @@ const DrawerContent = () => {
 
   return (
     <div className="flex flex-col h-full">
-      <Toolbar>
-        <TextCustom text={'Red Medicatel'} variant={'h4'} />
-      </Toolbar>
-      <Divider />
+      <div className='flex justify-center items-center my-10'>
+        <img src={RedMedicatelIcon} alt={'Red Medicatel'} className={'w-8/12 h-24'} />
+      </div>
+      <div className='w-full h-28 pr-4 mb-10'>
+        <div className='w-full h-full pl-10 flex items-center bg-blue-200'>
+          <img src={UserLogo} className='h-8 mr-4 w-10' />
+          <TextCustom text='Fundación Grupo Terra' className='mr-4 text-sm text-blue-800' />
+          <KeyboardArrowDownIcon color='primary' />
+        </div>
+      </div>
       <div className="flex flex-col justify-between h-full">
         <List>
           <DrawerItem
             text={'Empresa'}
             onClick={handleEmpresa}
-            icon={<InboxIcon />}
+            icon={<BusinessIcon />}
           />
           <DrawerItem
             text={'Colaboradores'}
             onClick={handleColaboradores}
-            icon={<MailIcon />}
+            icon={<SafetyDividerIcon />}
           />
         </List>
         <div>
@@ -58,7 +67,7 @@ const DrawerContent = () => {
           <DrawerItem
             text={'Cerrar sesión'}
             onClick={handleLogout}
-            icon={<Logout />}
+            icon={<LogoutIcon />}
           />
         </div>
       </div>

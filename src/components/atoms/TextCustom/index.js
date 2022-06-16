@@ -7,13 +7,15 @@ const TextCustom = ({
   variant = 'h6',
   isWrap = false,
   component = '',
+  ...rest
 }) => {
   return (
     <Typography
       paragraph={isParagraph}
       noWrap={isWrap}
       variant={variant}
-      component={component}>
+      component={component}
+      {...rest}>
       {text}
     </Typography>
   );

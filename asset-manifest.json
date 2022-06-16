@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/red-medicatel/static/css/main.8bf32baa.css",
-    "main.js": "/red-medicatel/static/js/main.e9104281.js",
+    "main.js": "/red-medicatel/static/js/main.25d0b8e5.js",
     "static/js/787.d7104437.chunk.js": "/red-medicatel/static/js/787.d7104437.chunk.js",
     "index.html": "/red-medicatel/index.html",
     "main.8bf32baa.css.map": "/red-medicatel/static/css/main.8bf32baa.css.map",
-    "main.e9104281.js.map": "/red-medicatel/static/js/main.e9104281.js.map",
+    "main.25d0b8e5.js.map": "/red-medicatel/static/js/main.25d0b8e5.js.map",
     "787.d7104437.chunk.js.map": "/red-medicatel/static/js/787.d7104437.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8bf32baa.css",
-    "static/js/main.e9104281.js"
+    "static/js/main.25d0b8e5.js"
   ]
 }

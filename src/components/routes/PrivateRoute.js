@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Navigate } from 'react-router-dom';
 
 export const PrivateRoute = ({ isAuth, element: Element, ...rest }) => {
-  return true ? <Element /> : <Navigate to="/Login" />;
+  return isAuth ? <Element /> : <Navigate to="/login" />;
 };
 
 PrivateRoute.propTypes = {

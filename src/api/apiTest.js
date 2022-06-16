@@ -11,7 +11,7 @@ export const apiTest = async params => {
   const request = { ...params };
 
   try {
-    const resp = await fetch(url, buildRequestGET(request));
+    const resp = await fetch(url, buildRequestGET('', '', request));
     const respJSON = await resp.json();
     dataResponse.success = true;
     dataResponse.data = respJSON;

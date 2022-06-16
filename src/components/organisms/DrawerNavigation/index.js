@@ -1,33 +1,29 @@
-import React, { useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
-import { DrawerContent, HeaderMenu } from '../../molecules';
+import { DrawerContent } from '../../molecules';
 
-const drawerWidth = 240;
-
-const DrawerNavigation = props => {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
+const DrawerNavigation = ({
+  window,
+  drawerWidth = 200,
+  mobileOpen = false,
+  handleDrawerToggle = () => null,
+}) => {
   const container = window ? () => window().document.body : undefined;
 
   return (
-    <div style={{ display: 'flex'}}>
+    <div style={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
+        className='bg-none'
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}>
-        <HeaderMenu />
       </AppBar>
       <Box
         component="nav"

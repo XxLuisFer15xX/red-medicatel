@@ -6,12 +6,14 @@ const ButtonCustom = ({
   onClick = () => null,
   text = '',
   className = '',
+  ...rest
 }) => {
   return (
     <Button
       variant={variant}
       onClick={onClick}
-      className={`w-full py-4 ${className}`}>
+      className={`w-full py-4 ${className}`}
+      {...rest}>
       {text}
     </Button>
   );

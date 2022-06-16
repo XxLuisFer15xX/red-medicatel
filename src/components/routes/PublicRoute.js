@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const PublicRoute = ({ isAuth, element: Element, option, ...rest }) => {
-  return !isAuth ? <Element option={option} /> : <Navigate to="/" />;
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isAuth) {
+      navigate('/dashboard/home');
+    } else {
+      navigate('/login');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuth]);
+
+  return <Element option={option} />;
 };
 
 PublicRoute.propTypes = {

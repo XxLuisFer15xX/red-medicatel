@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/red-medicatel/static/css/main.e7ec0f25.css",
-    "main.js": "/red-medicatel/static/js/main.c4345d42.js",
+    "main.css": "/red-medicatel/static/css/main.c37a52da.css",
+    "main.js": "/red-medicatel/static/js/main.962cdfe0.js",
     "static/js/787.d7104437.chunk.js": "/red-medicatel/static/js/787.d7104437.chunk.js",
     "static/media/login-logo.PNG": "/red-medicatel/static/media/login-logo.f78b08e755495971ac2b.PNG",
     "static/media/red-medicatel.PNG": "/red-medicatel/static/media/red-medicatel.7f18f3a4e78e0462e827.PNG",
     "static/media/user-logo.PNG": "/red-medicatel/static/media/user-logo.965cddea59540dcea7a9.PNG",
     "index.html": "/red-medicatel/index.html",
-    "main.e7ec0f25.css.map": "/red-medicatel/static/css/main.e7ec0f25.css.map",
-    "main.c4345d42.js.map": "/red-medicatel/static/js/main.c4345d42.js.map",
+    "main.c37a52da.css.map": "/red-medicatel/static/css/main.c37a52da.css.map",
+    "main.962cdfe0.js.map": "/red-medicatel/static/js/main.962cdfe0.js.map",
     "787.d7104437.chunk.js.map": "/red-medicatel/static/js/787.d7104437.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7ec0f25.css",
-    "static/js/main.c4345d42.js"
+    "static/css/main.c37a52da.css",
+    "static/js/main.962cdfe0.js"
   ]
 }

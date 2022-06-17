@@ -8,7 +8,7 @@ const HeaderMenu = ({ onClick = () => null }) => {
       <ButtonUser className="h-10" textStyle='text-black' iconColor='inherit' />
       <ButtonCustom
         text="Agendar"
-        className="h-10 mr-10 w-36 bg-blue-500"
+        className="h-10 mr-10 bg-blue-500"
         startIcon={<AddIcon />}
       />
     </div>

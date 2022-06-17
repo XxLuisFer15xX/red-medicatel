@@ -12,7 +12,7 @@ const ButtonCustom = ({
     <Button
       variant={variant}
       onClick={onClick}
-      className={`w-full py-4 ${className}`}
+      className={`py-4 ${className}`}
       {...rest}>
       {text}
     </Button>

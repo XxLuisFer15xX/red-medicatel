@@ -10,10 +10,10 @@ const Home = () => {
   return (
     <div className='grid grid-cols-3 gap-4 px-20 mb-20'>
       <div className='col-span-2 grid grid-rows-5 gap-4 h-auto'>
-        <div className='row-span-2 flex w-full bg-white'>
+        <div className='row-span-2 flex w-full bg-white border-gray-200 border'>
           <WelcomeSection name={personalInfo.nombre} />
         </div>
-        <div className='row-span-2 flex w-full bg-white'>
+        <div className='row-span-2 flex w-full bg-white border-gray-200 border'>
           <InfoUserSection
             name={personalInfo.nombre}
             phoneNumber={personalInfo.telefono}

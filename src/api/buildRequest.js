@@ -4,7 +4,8 @@ export const buildRequestGET = (username, password) => {
     method: 'GET',
     headers: {
       Accept: 'application/json',
-      'Content-Type': auth,
+      'Content-Type': 'application/json',
+      'Authorization': auth,
     },
   };
 };

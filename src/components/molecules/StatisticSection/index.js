@@ -3,7 +3,7 @@ import { TextCustom } from '../../atoms';
 
 const StatisticSection = ({ isCovid = false, title = '', text='' }) => {
   return (
-    <div className="bg-white flex flex-col py-2 px-4">
+    <div className="flex flex-col py-2 px-4 bg-white border-gray-200 border">
       <div className="w-full h-10">
         {isCovid && (
           <div className="bg-cyan-400 w-20 py-1 flex justify-center items-center rounded-full">

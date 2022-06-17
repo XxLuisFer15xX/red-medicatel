@@ -1,3 +1,4 @@
+export { default as CardColaborator } from "./CardColaborator";
 export { default as DrawerContent } from "./DrawerContent";
 export { default as HeaderMenu } from "./HeaderMenu";
 export { default as StatisticSection } from "./StatisticSection";

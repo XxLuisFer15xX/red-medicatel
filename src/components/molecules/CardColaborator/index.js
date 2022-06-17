@@ -17,9 +17,10 @@ const CardColaborator = ({
   nid = '',
   phoneNumber = '',
   email = '',
+  onClick = () => null
 }) => {
   return (
-    <div className="bg-white border-gray-200 border">
+    <div className="bg-white border-gray-200 border" onClick={onClick}>
       <div className='flex pl-10 py-5 w-full'>
         <div className='w-3/12'>
           <img src={UserIcon} alt='user' className='h-16' />

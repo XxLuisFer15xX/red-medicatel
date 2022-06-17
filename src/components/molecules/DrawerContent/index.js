@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -21,13 +21,8 @@ import { authTypes } from '../../../commons/types';
 const DrawerContent = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [currentPath, setCurrentPath] = useState('');
   const { auth, dispatchAuth } = useContext(AuthContext);
   const { personalInfo } = auth;
-
-  useEffect(() => {
-    setCurrentPath(location.pathname);
-  }, [location.pathname])
 
   const handleLogout = () => {
     dispatchAuth({ type: authTypes.logout });

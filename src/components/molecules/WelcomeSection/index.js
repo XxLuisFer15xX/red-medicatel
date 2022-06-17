@@ -1,20 +1,20 @@
 import React from 'react';
 import { ButtonCustom, TextCustom } from '../../atoms';
 
-const WelcomeSection = () => {
+const WelcomeSection = ({name = ''}) => {
   return (
     <div className="flex flex-col p-10">
-      <div className="flex">
+      <div className="flex mb-6 mt-6">
         <TextCustom text="Hola," className="text-blue-800 pr-1 text-3xl" />
         <TextCustom
-          text="Fundación Grupo Terra"
+          text={name}
           className="text-blue-800 font-bold text-3xl"
         />
       </div>
       <div className="mb-10">
         <TextCustom
           text="Bienvenido a Red Medicatel"
-          className="text-gray-600 pr-1 text-sm"
+          className="text-gray-600 pr-1 text-sm mb-2"
         />
         <TextCustom
           text="Agenda y ten toda la información médica de tu empresa"

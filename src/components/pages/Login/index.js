@@ -66,6 +66,12 @@ const Login = () => {
             value={email}
             className="w-full mb-10 border-blue-800"
             maxLength={30}
+            onKeyPress={(ev) => {
+              if (ev.key === 'Enter') {
+                ev.preventDefault();
+                handleLogin();
+              }
+            }}
           />
           <TextInputCustom
             text="Contraseña"
@@ -75,6 +81,12 @@ const Login = () => {
             className="w-full mb-2"
             type='password'
             maxLength={25}
+            onKeyPress={(ev) => {
+              if (ev.key === 'Enter') {
+                ev.preventDefault();
+                handleLogin();
+              }
+            }}
           />
           <div className='flex justify-end mb-10'>
             <Link to="/login" className='text-blue-800'>¿Olvidastes tu contraseña?</Link>

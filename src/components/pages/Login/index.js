@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 // Hooks
 import AuthContext from '../../../hooks/context/authContext';
@@ -20,17 +20,17 @@ import { apiLogin } from '../../../api/login';
 
 const Login = () => {
   const { dispatchAuth } = useContext(AuthContext);
-  const [values, handleInputChange,,resetValues] = useForm({
+  const [values, handleInputChange, , resetValues] = useForm({
     email: '',
     password: '',
   });
-  const { email,password } = values;
+  const { email, password } = values;
 
   const handleLogin = async () => {
     const params = {
       email,
       password,
-    }
+    };
     const response = await apiLogin(params);
     const { success, message, data } = response;
     if (success) {
@@ -66,7 +66,7 @@ const Login = () => {
             value={email}
             className="w-full mb-10 border-blue-800"
             maxLength={30}
-            onKeyPress={(ev) => {
+            onKeyPress={ev => {
               if (ev.key === 'Enter') {
                 ev.preventDefault();
                 handleLogin();
@@ -79,24 +79,36 @@ const Login = () => {
             handleInputChange={handleInputChange}
             value={password}
             className="w-full mb-2"
-            type='password'
+            type="password"
             maxLength={25}
-            onKeyPress={(ev) => {
+            onKeyPress={ev => {
               if (ev.key === 'Enter') {
                 ev.preventDefault();
                 handleLogin();
               }
             }}
           />
-          <div className='flex justify-end mb-10'>
-            <Link to="/login" className='text-blue-800'>¿Olvidastes tu contraseña?</Link>
+          <div className="flex justify-end mb-10">
+            <Link
+              to="/login"
+              className="text-blue-800 hover:underline underline-offset-2">
+              ¿Olvidastes tu contraseña?
+            </Link>
           </div>
         </div>
         <div className="w-full h-20">
-          <ButtonCustom text='INGRESAR' className='mb-4 w-full' onClick={handleLogin} />
-          <div className='flex flex-row justify-center'>
-            <p className='text-blue-800 mr-2'>¿No tienes cuenta aún?</p>
-            <Link to="/login" className='text-blue-800'>Registrate</Link>
+          <ButtonCustom
+            text="INGRESAR"
+            className="mb-4 w-full"
+            onClick={handleLogin}
+          />
+          <div className="flex flex-row justify-center">
+            <p className="text-blue-800 mr-2">¿No tienes cuenta aún?</p>
+            <Link
+              to="/login"
+              className="text-blue-800 hover:underline underline-offset-2">
+              Registrate
+            </Link>
           </div>
         </div>
       </div>

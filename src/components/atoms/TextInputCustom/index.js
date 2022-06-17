@@ -22,7 +22,7 @@ const TextInputCustom = ({
       type={type}
       inputProps={{
         maxLength: maxLength,
-    }}
+      }}
       {...rest}
     />
   );

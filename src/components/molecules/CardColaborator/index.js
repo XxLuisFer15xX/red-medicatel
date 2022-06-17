@@ -1,0 +1,47 @@
+import React from 'react';
+import { Divider } from '@mui/material';
+
+// Icons
+import BadgeIcon from '@mui/icons-material/Badge';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIcon from '@mui/icons-material/Phone';
+import UserIcon from '../../../assets/images/user.PNG';
+
+// Components
+import { DetailItem, TextCustom } from '../../atoms';
+
+const CardColaborator = () => {
+  return (
+    <div className="bg-white border-gray-200 border">
+      <div className='flex pl-10 py-5 w-full'>
+        <div className='w-3/12'>
+          <img src={UserIcon} alt='user' className='h-16' />
+        </div>
+        <div className='flex flex-col w-9/12'>
+          <TextCustom text='Juan Pedro Pérez' className='text-lg text-blue-900 font-bold' />
+          <TextCustom text='Cargo' className='text-sm text-cyan-300 font-bold' />
+          <TextCustom text='Tegucigalpa' className='text-sm text-gray-900' />
+        </div>
+      </div>
+      <Divider /> 
+      <div className="flex flex-col py-10 pl-16 pr-4">
+        <DetailItem
+          text={'0801-1900-000000'}
+          icon={<BadgeIcon className="mr-6" />}
+          className={'mb-2'}
+        />
+        <DetailItem
+          text={'(504) 2222-2222'}
+          icon={<PhoneIcon className="mr-6" />}
+          className={'mb-2'}
+        />
+        <DetailItem
+          text={'juaperez@fundacionterra.com'}
+          icon={<MailOutlineIcon className="mr-6" />}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default CardColaborator;

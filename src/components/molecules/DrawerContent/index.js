@@ -44,7 +44,7 @@ const DrawerContent = () => {
         />
       </div>
       <div className="w-full h-28 pr-4 mb-10">
-        <div className="w-full h-full pl-10 flex items-center bg-blue-200">
+        <div className="w-full h-full pl-10 flex items-center bg-blue-100">
           <ButtonUser />
         </div>
       </div>

@@ -10,8 +10,8 @@ const DrawerItem = ({ text = '', onClick = () => null, icon = null }) => {
   };
 
   return (
-    <ListItem key={text} disablePadding onClick={handleClick}>
-      <ListItemButton className='pl-10'>
+    <ListItem key={text} disablePadding onClick={handleClick} >
+      <ListItemButton className='pl-10 hover:bg-blue-100'>
         <ListItemIcon>{icon}</ListItemIcon>
         <ListItemText primary={text} />
       </ListItemButton>

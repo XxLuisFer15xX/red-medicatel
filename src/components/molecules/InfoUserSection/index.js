@@ -36,7 +36,7 @@ const InfoUserSection = ({
             />
             <TextCustom
               text={email}
-              className="text-cyan-500 font-bold text-sm"
+              className="text-cyan-500 font-bold text-sm hover:underline underline-offset-2 cursor-pointer"
             />
           </div>
         </div>
@@ -47,13 +47,13 @@ const InfoUserSection = ({
             title="RTN:"
             text={rtn}
             icon={<BadgeIcon className="mr-6" />}
-            className='mb-6'
+            className="mb-6"
           />
           <DetailItem
             title="País:"
             text={country}
             icon={<FlagIcon className="mr-6" />}
-            className='mb-6'
+            className="mb-6"
           />
         </div>
         <div className="w-6/12">
@@ -61,13 +61,13 @@ const InfoUserSection = ({
             title="Teléfono:"
             text={phoneNumber}
             icon={<PhoneIcon className="mr-6" />}
-            className='mb-6'
+            className="mb-6"
           />
           <DetailItem
             title="Ciudad:"
             text={city}
             icon={<LocationCityIcon className="mr-6" />}
-            className='mb-6'
+            className="mb-6"
           />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment } from '@mui/material';
 
@@ -7,12 +7,13 @@ import { useForm } from '../../../hooks/useForm';
 
 // Components
 import { TextCustom, TextInputCustom } from '../../atoms';
-import { CardColaborator } from '../../molecules';
+import { GridColaborators } from '../../organisms';
 
 // Apis
 import { apiColaboratos } from '../../../api';
 
 const Colaborators = () => {
+  const [loader, setLoader] = useState(false);
   const [values, handleInputChange, setValues] = useForm({
     search: '',
     colaborators: [],
@@ -25,6 +26,7 @@ const Colaborators = () => {
   }, []);
 
   const loadInfo = async () => {
+    setLoader(true);
     const response = await apiColaboratos();
     const { success, message, data } = response;
     if (success) {
@@ -35,6 +37,7 @@ const Colaborators = () => {
     } else {
       console.log(message);
     }
+    setLoader(false);
   };
 
   return (
@@ -68,32 +71,17 @@ const Colaborators = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 w-full mb-20">
-        {colaborators.map((colaborator, index) => {
-          const {
-            nombre,
-            apellido,
-            cargo,
-            ciudad,
-            id,
-            telefono,
-            correo,
-            pais,
-          } = colaborator;
-          return (
-            <CardColaborator
-              key={index}
-              name={`${nombre} ${apellido}`}
-              position={cargo}
-              city={ciudad}
-              nid={id}
-              phoneNumber={telefono}
-              email={correo}
-              country={pais}
-            />
-          );
-        })}
-      </div>
+      {colaborators.length !== 0 ? (
+        <GridColaborators colaborators={colaborators} />
+      ) : loader ? (
+        <div className="flex w-full justify-center items-center mb-20 mt-10">
+          <TextCustom text="¡Cargando Colaboradores!" variant="h3" />
+        </div>
+      ) : (
+        <div className="flex w-full justify-center items-center mb-20 mt-10">
+          <TextCustom text="¡Sin colaboradores que mostrar!" variant="h3" />
+        </div>
+      )}
     </div>
   );
 };

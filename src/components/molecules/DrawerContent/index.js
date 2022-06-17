@@ -20,7 +20,8 @@ import { authTypes } from '../../../commons/types';
 
 const DrawerContent = () => {
   const navigate = useNavigate();
-  const { dispatchAuth } = useContext(AuthContext);
+  const { auth, dispatchAuth } = useContext(AuthContext);
+  const { personalInfo } = auth;
 
   const handleLogout = () => {
     dispatchAuth({ type: authTypes.logout });
@@ -44,8 +45,8 @@ const DrawerContent = () => {
         />
       </div>
       <div className="w-full h-28 pr-4 mb-10">
-        <div className="w-full h-full pl-10 flex items-center bg-blue-200">
-          <ButtonUser />
+        <div className="w-full h-full pl-10 flex items-center bg-blue-100">
+          <ButtonUser text={personalInfo.nombre} className='w-full' />
         </div>
       </div>
       <div className="flex flex-col justify-between h-full">

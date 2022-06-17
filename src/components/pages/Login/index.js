@@ -81,7 +81,7 @@ const Login = () => {
           </div>
         </div>
         <div className="w-full h-20">
-          <ButtonCustom text='INGRESAR' className='mb-4' onClick={handleLogin} />
+          <ButtonCustom text='INGRESAR' className='mb-4 w-full' onClick={handleLogin} />
           <div className='flex flex-row justify-center'>
             <p className='text-blue-800 mr-2'>¿No tienes cuenta aún?</p>
             <Link to="/login" className='text-blue-800'>Registrate</Link>

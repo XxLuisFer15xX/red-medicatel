@@ -1,5 +1,8 @@
 # Red Medicatel
 
+- Version: v1.0.0
+- Created by: Luis Fernando Solano
+
 ## Steps to follow
 
 1. Clone the project.

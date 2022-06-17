@@ -10,7 +10,14 @@ import UserIcon from '../../../assets/images/user.PNG';
 // Components
 import { DetailItem, TextCustom } from '../../atoms';
 
-const CardColaborator = () => {
+const CardColaborator = ({
+  name = '',
+  position = '',
+  city = '',
+  nid = '',
+  phoneNumber = '',
+  email = '',
+}) => {
   return (
     <div className="bg-white border-gray-200 border">
       <div className='flex pl-10 py-5 w-full'>
@@ -18,25 +25,25 @@ const CardColaborator = () => {
           <img src={UserIcon} alt='user' className='h-16' />
         </div>
         <div className='flex flex-col w-9/12'>
-          <TextCustom text='Juan Pedro Pérez' className='text-lg text-blue-900 font-bold' />
-          <TextCustom text='Cargo' className='text-sm text-cyan-300 font-bold' />
-          <TextCustom text='Tegucigalpa' className='text-sm text-gray-900' />
+          <TextCustom text={name} className='text-lg text-blue-900 font-bold' />
+          <TextCustom text={position} className='text-sm text-cyan-300 font-bold' />
+          <TextCustom text={city} className='text-sm text-gray-900' />
         </div>
       </div>
       <Divider /> 
       <div className="flex flex-col py-10 pl-16 pr-4">
         <DetailItem
-          text={'0801-1900-000000'}
+          text={nid}
           icon={<BadgeIcon className="mr-6" />}
           className={'mb-2'}
         />
         <DetailItem
-          text={'(504) 2222-2222'}
+          text={phoneNumber}
           icon={<PhoneIcon className="mr-6" />}
           className={'mb-2'}
         />
         <DetailItem
-          text={'juaperez@fundacionterra.com'}
+          text={email}
           icon={<MailOutlineIcon className="mr-6" />}
         />
       </div>
